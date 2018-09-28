@@ -105,7 +105,7 @@ textarea {
 /* ========================start header======================== */
 header {
     background-color: rgb(154, 241, 241);
-    width: 96%;
+    width: 95%;
     height: 20vh;
     padding: 1%;
     margin: auto;    
@@ -119,50 +119,6 @@ h1> span {
 /* ========================end header======================== */
 
 /* ========================start main======================== */
-h3> span {
-    color: red;
-    font-size: 1.5em;
-}
-
-.telAcceil {
-    width: 100%;
-    height: 60vh;
-    display: flex;
-    justify-content: space-around;
-    margin: auto;
-}
-
-.video {
-    margin: 1% 2% 1% 6%;
-}
-
-.img {
-    margin: 2% 10%;
-}
-
-.produit {
-    width: 40%;
-    text-align: center;
-    margin: 2% auto;
-}
-
-.pro {
-    margin: auto;
-}
-
-.Button {
-    width: 30%;
-    height: 6vh;
-    background-color: rgb(99, 191, 252);
-	color: black;
-    border-radius: 20px;
-    padding: 6px 0px; 
-    cursor: pointer;
-}
-
-.containerBouton {
-    margin-top: 3%;
-}
 
 
 

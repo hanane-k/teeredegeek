@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8"><script type="text/javascript" src="product_data/b0e791fa30"></script><script src="product_data/nr-1071.js"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demo Comparateur de forfaits - PAGE PRODUIT</title>
+                    <link rel="stylesheet" href="product_data/base.css">
+            </head>
+    <body>
+                    <script src="product_data/cdiscount_front.js"></script>
+                            <div id="contentComparateur"><main id="sub_part_comparator">
+                                            <header>
+        <h2 class="h2_mob">Forfait télephonique</h2>
+        <h2 class="h2_bur">Forfait télephonique</h2>        
+                <!-- BLOC-ABO-MOBILE-GAUCHE -->
+            <div class="produit_mob">
+                <h3>Trouver un forfait pour ce mobile</h3>
+                <table class="produit_mob_desc tableau">
+                                                            <tbody><tr class="produit_op ligne">
+                                                <td class="produit_img cellule" rowspan="3">
+                                        <img src="product_data/d77456706f1e765c101f1a56b40badd1.jpeg" class="" alt="Samsung Galaxy J3 2016 Or">
+    
+                        </td>
+                                                <td class="produit_operateur cellule">
+                                                            <img class="logo_cach" src="product_data/92aab2d87ea29a865e0b2b60219e4047.jpeg" alt="NRJ Mobile">
+                                                    </td>
+                        <td class="produit_operateur cellule" colspan="2">
+                                                            <span>INDISPONIBLE</span>
+                                                    </td>
+                                            </tr>
+                                                            <tr class="produit_op ligne">
+                                                <td class="produit_operateur cellule">
+                                                            <img class="logo_cach" src="product_data/1ba8cefbb75c1e83dcf0c1ed28895dda.jpeg" alt="SFR">
+                                                    </td>
+                        <td class="produit_operateur cellule" colspan="2">
+                                                            <span>INDISPONIBLE</span>
+                                                    </td>
+                                            </tr>
+                                                            <tr class="produit_op ligne">
+                                                <td class="produit_operateur cellule">
+                                                            <img class="logo_cach" src="product_data/0c5cc7e60c4c2f24770af94e152b9977.jpeg" alt="Bouygues Télécom">
+                                                    </td>
+                        <td class="produit_operateur cellule" colspan="2">
+                                                            <span>INDISPONIBLE</span>
+                                                    </td>
+                                            </tr>
+                                                        </tbody></table>
+                <div class="lien">
+                	<a href="https://www.cdiscount.com/telephonie/les-mobiles-et-smartphones/v-14433-14433.html?&amp;cm_sp=3w_fiche-produit-centre" class="" target="_top">Voir toutes les offres</a>
+                </div>
+            </div>
+                <!-- FILTRE-POUR-MOBILE -->
+        <div class="header_filtre_prod">
+            <div class="filtre">
+                                    <form name="" method="get" action="https://www.cdiscount.com/telephonie/forfaits-sans-engagement/comparer-les-forfaits/v-1446405-1446405.html?&amp;cm_sp=3w_fiche-produit-centre" id="fseFilterFormsMobile" class="filtre_p" target="_top">
+                                    <p class="pmob">Trouver un forfait sans engagement</p>
+                    <span class="forf">52 forfaits référencés</span>
+                    <br> <br>
+                    <p class="prix_max">
+                        <span class="min_mob">Prix maximum</span>
+                        <span class="max_mob">30 €</span>
+                    </p>
+                    <input id="filterPriceMobile" name="price" step="1" min="1" max="100" value="30" style="background-size: 29.2929% 100%;" type="range">
+                    <p class="prix_max">
+                        <span class="min_mob">Data web minimum</span>
+                        <span class="max_mob">5 Go</span>
+                    </p>
+                    <input id="filterDataMobile" name="internetCapacity" step="1" min="0" max="50" class="invert_range" value="5" style="background-size: 100% 100%; background-position-x: 0px;" type="range">
+                    <p class="prix_max">
+                        <span class="min_mob">Appels minimum</span>
+                        <span class="max_mob">2 h</span>
+                    </p>
+                    <input id="filterCallMobile" name="callTime" step="1" min="0" max="20" class="invert_range" value="2" style="background-size: 100% 100%; background-position-x: 0px;" type="range"> <br> <br>
+                    <div class="lien-filtre_p">
+                        <button class="comparer">Comparer</button>
+                    </div>
+                    <!-- LE-LIEN-FILTRE-DU-HEADER -->
+                    <div class="lien-filtre_prod">
+                        <span>Comparez aussi :</span>
+                        <p>
+                            <a href="https://www.cdiscount.com/telephonie/les-mobiles-et-smartphones/v-14433-14433.html?&amp;cm_sp=3w_fiche-produit-centre" class="" target="_top">Les mobiles avec engagement</a>
+                        </p>
+                        <p>
+                            <a href="https://www.cdiscount.com/telephonie/forfait-box-adsl/v-14472-14472.html?&amp;cm_sp=3w_fiche-produit-centre" class="" target="_top">Les box internet</a>
+                        </p>
+                    </div>
+                <input id="type" name="type" value="Forfait sans engagement" type="hidden"><input name="cm_sp" value="3w_fiche-produit-centre" type="hidden"></form>
+            </div>
+        </div>    
+    </header>
+    <!-- BLOC-PUB-DROITE-MOBILE -->
+        <!-- FORFAIT-POUR-MOBILE -->
+        <div class="forfait_mob_container">
+            <h4>Top offres forfaits</h4>
+            <div class="forfait_global">
+                                                    
+                    <div class="forfait_mob">
+                        <div class="logo">
+                            <a href="https://comparateur.3wregie.eu/transition/?route_name=front_comparator_fse&amp;url_dest=https%3A//www.awin1.com/cread.php%3Fawinmid%3D7310%26awinaffid%3D315619%26clickref%3D%26p%3Dhttps%253A%252F%252Fwww.red-by-sfr.fr%252Fforfaits-mobiles%252F%2523redintid%253DB_menu-boutique_forfaits&amp;operator_id=7&amp;item_id=10&amp;cm_sp=3w_fiche-produit-droite" target="_blank">
+								<img src="product_data/84bdea337751ac00b4e94c0940230372.png" alt="logo-operateur">
+							</a>
+                        </div>
+                        <div class="forfait_mob_desc">
+                            <a href="https://comparateur.3wregie.eu/transition/?route_name=front_comparator_fse&amp;url_dest=https%3A//www.awin1.com/cread.php%3Fawinmid%3D7310%26awinaffid%3D315619%26clickref%3D%26p%3Dhttps%253A%252F%252Fwww.red-by-sfr.fr%252Fforfaits-mobiles%252F%2523redintid%253DB_menu-boutique_forfaits&amp;operator_id=7&amp;item_id=10&amp;cm_sp=3w_fiche-produit-droite" target="_blank">
+                                <p class="forfait">
+                                    <strong>Promo !</strong>
+                                </p>
+                                <span>
+                                                                            Sans engagement,
+                                                                                                                30Go
+                                                                        en
+                                    4G
+                                </span> <br>
+                                                                                                            <strong class="prix">10&nbsp;€</strong>
+                                                                                                    <span class="prod_m">Par mois</span>
+                            </a>
+                        </div>
+                    </div>
+                                                        
+                    <div class="forfait_mob">
+                        <div class="logo">
+                            <a href="https://comparateur.3wregie.eu/transition/?route_name=front_comparator_fse&amp;url_dest=https%3A//www.cdiscount.com/cdiscountmobile%23cm_sp%3Dcomparateur&amp;operator_id=10&amp;item_id=102&amp;cm_sp=3w_fiche-produit-droite" target="_blank">
+								<img src="product_data/ffb4fb43fb108e35318606ed9db6e196.png" alt="logo-operateur">
+							</a>
+                        </div>
+                        <div class="forfait_mob_desc">
+                            <a href="https://comparateur.3wregie.eu/transition/?route_name=front_comparator_fse&amp;url_dest=https%3A//www.cdiscount.com/cdiscountmobile%23cm_sp%3Dcomparateur&amp;operator_id=10&amp;item_id=102&amp;cm_sp=3w_fiche-produit-droite" target="_blank">
+                                <p class="forfait">
+                                    <strong>50Go = 10€ A VIE !</strong>
+                                </p>
+                                <span>
+                                                                            Sans engagement,
+                                                                                                                50Go
+                                                                        en
+                                    4G
+                                </span> <br>
+                                                                                                            <strong class="prix">10&nbsp;€</strong>
+                                                                                                    <span class="prod_m">Par mois</span>
+                            </a>
+                        </div>
+                    </div>
+                                                        
+                    <div class="forfait_mob">
+                        <div class="logo">
+                            <a href="https://comparateur.3wregie.eu/transition/?route_name=front_comparator_fse&amp;url_dest=https%3A//www.awin1.com/awclick.php%3Fgid%3D311374%26mid%3D7099%26awinaffid%3D315619%26linkid%3D639402%26clickref%3Dcomparo-complet-1499%26p%3Dhttp%3A//www.prixtel.com/forfait-mobile/forfait-complet/%3Futm_source%3Daffiliation-zanox%26utm_medium%3Dcpa%26utm_campaign%3Dprixtel&amp;operator_id=13&amp;item_id=38&amp;cm_sp=3w_fiche-produit-droite" target="_blank">
+								<img src="product_data/69f7276784238cf49145cc41873f4988.jpeg" alt="logo-operateur">
+							</a>
+                        </div>
+                        <div class="forfait_mob_desc">
+                            <a href="https://comparateur.3wregie.eu/transition/?route_name=front_comparator_fse&amp;url_dest=https%3A//www.awin1.com/awclick.php%3Fgid%3D311374%26mid%3D7099%26awinaffid%3D315619%26linkid%3D639402%26clickref%3Dcomparo-complet-1499%26p%3Dhttp%3A//www.prixtel.com/forfait-mobile/forfait-complet/%3Futm_source%3Daffiliation-zanox%26utm_medium%3Dcpa%26utm_campaign%3Dprixtel&amp;operator_id=13&amp;item_id=38&amp;cm_sp=3w_fiche-produit-droite" target="_blank">
+                                <p class="forfait">
+                                    <strong>Le complet</strong>
+                                </p>
+                                <span>
+                                                                            Sans engagement,
+                                                                                                                50Go
+                                                                        en
+                                    4G
+                                </span> <br>
+                                                                                                            <strong class="prix">19<sup>,99</sup>&nbsp;€</strong>
+                                                                                                    <span class="prod_m">Par mois</span>
+                            </a>
+                        </div>
+                    </div>
+                                                </div>
+            <div class="forfait_mob_lien">
+                <a href="https://www.cdiscount.com/telephonie/forfaits-sans-engagement/comparer-les-forfaits/v-1446405-1446405.html?&amp;cm_sp=3w_fiche-produit-centre" class="" target="_top">Comparer toutes les offres</a>
+            </div>
+        </div>
+        
+    <!-- POUR-BUREAU -->
+    <div class="produit_home">
+                    <!-- BLOC-ABO-BUREAU -->
+            <div class="produit_bur">
+                <h3>Trouver un forfait pour ce mobile</h3>
+                <table class="produit_mob_desc tableau">
+                                                            <tbody><tr class="produit_op ligne">
+                                                <td class="produit_img cellule" rowspan="3">
+                            <div class="logo">
+                                            <img src="product_data/d77456706f1e765c101f1a56b40badd1.jpeg" class="" alt="Samsung Galaxy J3 2016 Or">
+    
+                            </div>
+                        </td>
+                                                <td class="produit_operateur cellule">
+                                                        <div class="logo_cach">
+                                <img src="product_data/92aab2d87ea29a865e0b2b60219e4047.jpeg" alt="NRJ Mobile">
+                            </div>
+                                                    </td>
+                        <td class="bloc_desc cellule" colspan="2">
+                                                        <div class="desc">
+                                <span>INDISPONIBLE</span>
+                            </div>
+                                                    </td>
+                                            </tr>
+                                                            <tr class="produit_op ligne">
+                                                <td class="produit_operateur cellule">
+                                                        <div class="logo_cach">
+                                <img src="product_data/1ba8cefbb75c1e83dcf0c1ed28895dda.jpeg" alt="SFR">
+                            </div>
+                                                    </td>
+                        <td class="bloc_desc cellule" colspan="2">
+                                                        <div class="desc">
+                                <span>INDISPONIBLE</span>
+                            </div>
+                                                    </td>
+                                            </tr>
+                                                            <tr class="produit_op ligne">
+                                                <td class="produit_operateur cellule">
+                                                        <div class="logo_cach">
+                                <img src="product_data/0c5cc7e60c4c2f24770af94e152b9977.jpeg" alt="Bouygues Télécom">
+                            </div>
+                                                    </td>
+                        <td class="bloc_desc cellule" colspan="2">
+                                                        <div class="desc">
+                                <span>INDISPONIBLE</span>
+                            </div>
+                                                    </td>
+                                            </tr>
+                                                        </tbody></table>
+                <div class="lien">
+                	<a href="https://www.cdiscount.com/telephonie/les-mobiles-et-smartphones/v-14433-14433.html?&amp;cm_sp=3w_fiche-produit-centre" class="" target="_top">Voir toutes les offres</a>
+                </div>
+            </div>
+                
+        <!-- FILTRE-FSE-POUR-BUREAU -->
+        <div class="filtre_home_pr">
+            <div class="title_home">
+                <h3>Trouver un forfait sans engagement</h3>
+                <span>52 forfaits référencés</span>
+            </div>
+                            <form name="" method="get" action="https://www.cdiscount.com/telephonie/forfaits-sans-engagement/comparer-les-forfaits/v-1446405-1446405.html?&amp;cm_sp=3w_fiche-produit-centre" id="fseFilterFormsDesktop" target="_top">
+                        <div class="filtre_home_produit">
+                <div class="filtre_home">
+                    <p>
+                        <span class="min_mob">Prix</span>
+                        <span class="max_mob">30 €</span>
+                    </p>
+                    <input id="filterPriceDesktop" name="price" step="1" min="1" max="100" value="30" style="background-size: 29.2929% 100%;" type="range"> <br>
+                    <p>
+                        <span class="min_mob">Data web minimum</span>
+                        <span class="max_mob">5 Go</span>
+                    </p>
+                    <input id="filterDataDesktop" name="internetCapacity" step="1" min="0" max="50" class="invert_range" value="5" style="background-size: 100% 100%; background-position-x: 22.4px;" type="range">
+                </div>
+                <div class="filtre_home_sec">
+                    <p>
+                        <span class="min_mob">Appels minimum</span>
+                        <span class="max_mob">2 h</span>
+                    </p>
+                    <input id="filterCallDesktop" name="callTime" step="1" min="0" max="20" class="invert_range" value="2" style="background-size: 100% 100%; background-position-x: 22.4px;" type="range">
+                    <button class="comparer">Comparer</button>
+                </div>
+            </div>
+            <div class="lien">
+                <span>Comparez aussi : </span>
+                <a href="https://www.cdiscount.com/telephonie/les-mobiles-et-smartphones/v-14433-14433.html?&amp;cm_sp=3w_fiche-produit-centre" class="" target="_top">Les mobiles avec engagement</a>
+                <span> | </span>
+                <a href="https://www.cdiscount.com/telephonie/forfait-box-adsl/v-14472-14472.html?&amp;cm_sp=3w_fiche-produit-centre" class="" target="_top">Les box internet</a>
+            </div>
+            <input id="type" name="type" value="Forfait sans engagement" type="hidden"><input name="cm_sp" value="3w_fiche-produit-centre" type="hidden"></form>
+        </div>
+                    <!-- BLOC-MEILLEUR-OFFRE-POUR-BUREAU -->
+            <div class="offre_produit">
+                <h3>Les meilleures offres du moment</h3>
+                <div class="tableau">
+                    <div class="corps">
+                                                                        <a class="offre_produit_desc" href="https://comparateur.3wregie.eu/transition/?route_name=front_comparator_fse&amp;url_dest=https%3A//www.awin1.com/cread.php%3Fawinmid%3D7310%26awinaffid%3D315619%26clickref%3D%26p%3Dhttps%253A%252F%252Fwww.red-by-sfr.fr%252Fforfaits-mobiles%252F%2523redintid%253DB_menu-boutique_forfaits&amp;operator_id=7&amp;item_id=10&amp;cm_sp=3w_fiche-produit-droite" target="_blank">
+                            <div class="logo">
+							    <img src="product_data/84bdea337751ac00b4e94c0940230372.png" alt="">
+                            </div>
+                            <div class="desc_bloc">
+                                <strong>Promo !</strong>
+	                            <p>
+	                                	                                    Sans engagement,
+	                                	                                	                                    30Go
+	                                	                                en
+	                                4G
+	                            </p>
+                                <p class="detail">Voir les détails</p>
+                            </div>
+                            <div class="prix">
+                                                                                                            <strong>10&nbsp;€</strong>
+                                                                                                    <p>Par mois</p>
+                            </div>
+                        </a>
+                                                                        <a class="offre_produit_desc" href="https://comparateur.3wregie.eu/transition/?route_name=front_comparator_fse&amp;url_dest=https%3A//www.cdiscount.com/cdiscountmobile%23cm_sp%3Dcomparateur&amp;operator_id=10&amp;item_id=102&amp;cm_sp=3w_fiche-produit-droite" target="_blank">
+                            <div class="logo">
+							    <img src="product_data/ffb4fb43fb108e35318606ed9db6e196.png" alt="">
+                            </div>
+                            <div class="desc_bloc">
+                                <strong>50Go = 10€ A VIE !</strong>
+	                            <p>
+	                                	                                    Sans engagement,
+	                                	                                	                                    50Go
+	                                	                                en
+	                                4G
+	                            </p>
+                                <p class="detail">Voir les détails</p>
+                            </div>
+                            <div class="prix">
+                                                                                                            <strong>10&nbsp;€</strong>
+                                                                                                    <p>Par mois</p>
+                            </div>
+                        </a>
+                                                                        <a class="offre_produit_desc" href="https://comparateur.3wregie.eu/transition/?route_name=front_comparator_fse&amp;url_dest=https%3A//www.awin1.com/awclick.php%3Fgid%3D311374%26mid%3D7099%26awinaffid%3D315619%26linkid%3D639402%26clickref%3Dcomparo-complet-1499%26p%3Dhttp%3A//www.prixtel.com/forfait-mobile/forfait-complet/%3Futm_source%3Daffiliation-zanox%26utm_medium%3Dcpa%26utm_campaign%3Dprixtel&amp;operator_id=13&amp;item_id=38&amp;cm_sp=3w_fiche-produit-droite" target="_blank">
+                            <div class="logo">
+							    <img src="product_data/69f7276784238cf49145cc41873f4988.jpeg" alt="">
+                            </div>
+                            <div class="desc_bloc">
+                                <strong>Le complet</strong>
+	                            <p>
+	                                	                                    Sans engagement,
+	                                	                                	                                    50Go
+	                                	                                en
+	                                4G
+	                            </p>
+                                <p class="detail">Voir les détails</p>
+                            </div>
+                            <div class="prix">
+                                                                                                            <strong>19<sup>,99</sup>&nbsp;€</strong>
+                                                                                                    <p>Par mois</p>
+                            </div>
+                        </a>
+                                                                    </div>        
+                </div>        
+            </div>
+            </div>
+    <script type="text/javascript">
+        priceDesktopRange = document.querySelector('#sub_part_comparator #filterPriceDesktop');
+        priceDesktopLabel = priceDesktopRange.previousElementSibling.querySelector('.max_mob');
+        priceDesktopRange.autoRange = new InputRange(priceDesktopRange, priceDesktopLabel, false, '€');
+
+        dataDesktopRange = document.querySelector('#sub_part_comparator #filterDataDesktop');
+        dataDesktopLabel = dataDesktopRange.previousElementSibling.querySelector('.max_mob');
+        dataDesktopRange.autoRange = new InputRange(dataDesktopRange, dataDesktopLabel, true, 'Go', [
+            {
+                operator    : 'equal',
+                opposition  : dataDesktopRange.max,
+                replacement : 'illimité',
+                addUnit     : false
+            },
+            {
+                operator    : 'equal',
+                opposition  : dataDesktopRange.min,
+                replacement : 'aucun',
+                addUnit     : false
+            },
+            {
+                operator    : 'lowerThan',
+                opposition  : 1,
+                callback    : function(value){
+                    return (value * 1000) + ' Mo'
+                }
+            }
+        ]);
+
+        callDesktopRange = document.querySelector('#sub_part_comparator #filterCallDesktop');
+        callDesktopLabel = callDesktopRange.previousElementSibling.querySelector('.max_mob');
+        callDesktopRange.autoRange = new InputRange(callDesktopRange, callDesktopLabel, false, 'h', [
+            {
+                operator    : 'equal',
+                opposition  : callDesktopRange.max,
+                replacement : 'illimité',
+                addUnit     : false
+            },
+            {
+                operator    : 'equal',
+                opposition  : callDesktopRange.min,
+                replacement : 'aucun',
+                addUnit     : false
+            }
+        ]);
+
+        priceMobileRange = document.querySelector('#sub_part_comparator #filterPriceMobile');
+        priceMobileLabel = priceMobileRange.previousElementSibling.querySelector('.max_mob');
+        priceMobileRange.autoRange = new InputRange(priceMobileRange, priceMobileLabel, false, '€');
+
+        dataMobileRange = document.querySelector('#sub_part_comparator #filterDataMobile');
+        dataMobileLabel = dataMobileRange.previousElementSibling.querySelector('.max_mob');
+        dataMobileRange.autoRange = new InputRange(dataMobileRange, dataMobileLabel, true, 'Go', [
+            {
+                operator    : 'equal',
+                opposition  : dataMobileRange.max,
+                replacement : 'illimité',
+                addUnit     : false
+            },
+            {
+                operator    : 'equal',
+                opposition  : dataMobileRange.min,
+                replacement : 'aucun',
+                addUnit     : false
+            },
+            {
+                operator    : 'lowerThan',
+                opposition  : 1,
+                callback    : function(value){
+                    return (value * 1000) + ' Mo'
+                }
+            }
+        ]);
+
+        callMobileRange = document.querySelector('#sub_part_comparator #filterCallMobile');
+        callMobileLabel = callMobileRange.previousElementSibling.querySelector('.max_mob');
+        callMobileRange.autoRange = new InputRange(callMobileRange, callMobileLabel, false, 'h', [
+            {
+                operator    : 'equal',
+                opposition  : callMobileRange.max,
+                replacement : 'illimité',
+                addUnit     : false
+            },
+            {
+                operator    : 'equal',
+                opposition  : callMobileRange.min,
+                replacement : 'aucun',
+                addUnit     : false
+            }
+        ]);
+    </script>
+</main></div>
+
+            <script type="text/javascript">
+                contentM = new ContentManager(
+                    document.querySelector('#contentComparateur'),     //element dans lequel le contenu serra ajouté
+                    'https://comparateur.3wregie.eu/product?referencePhoneCdiscount=samsunggalaxyj3o'
+                );
+            </script>
+            <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b0e791fa30","applicationID":"92778097","transactionName":"ZVFRNUtRXUAEVUBbXFwbcgJNWVxdSlJRX1xtREEOXUVQRw==","queueTime":0,"applicationTime":8,"atts":"SRZSQwNLTk4=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<script><br>        priceDesktopRange = document.querySelector('#sub_part_comparator #filterPriceDesktop');<br>        priceDesktopLabel = priceDesktopRange.previousElementSibling.querySelector('.max_mob');<br>        priceDesktopRange.autoRange = new InputRange(priceDesktopRange, priceDesktopLabel, false, '€');<br><br>        dataDesktopRange = document.querySelector('#sub_part_comparator #filterDataDesktop');<br>        dataDesktopLabel = dataDesktopRange.previousElementSibling.querySelector('.max_mob');<br>        dataDesktopRange.autoRange = new InputRange(dataDesktopRange, dataDesktopLabel, true, 'Go', [<br>            {<br>                operator    : 'equal',<br>                opposition  : dataDesktopRange.max,<br>                replacement : 'illimité',<br>                addUnit     : false<br>            },<br>            {<br>                operator    : 'equal',<br>                opposition  : dataDesktopRange.min,<br>                replacement : 'aucun',<br>                addUnit     : false<br>            },<br>            {<br>                operator    : 'lowerThan',<br>                opposition  : 1,<br>                callback    : function(value){<br>                    return (value * 1000) + ' Mo'<br>                }<br>            }<br>        ]);<br><br>        callDesktopRange = document.querySelector('#sub_part_comparator #filterCallDesktop');<br>        callDesktopLabel = callDesktopRange.previousElementSibling.querySelector('.max_mob');<br>        callDesktopRange.autoRange = new InputRange(callDesktopRange, callDesktopLabel, false, 'h', [<br>            {<br>                operator    : 'equal',<br>                opposition  : callDesktopRange.max,<br>                replacement : 'illimité',<br>                addUnit     : false<br>            },<br>            {<br>                operator    : 'equal',<br>                opposition  : callDesktopRange.min,<br>                replacement : 'aucun',<br>                addUnit     : false<br>            }<br>        ]);<br><br>        priceMobileRange = document.querySelector('#sub_part_comparator #filterPriceMobile');<br>        priceMobileLabel = priceMobileRange.previousElementSibling.querySelector('.max_mob');<br>        priceMobileRange.autoRange = new InputRange(priceMobileRange, priceMobileLabel, false, '€');<br><br>        dataMobileRange = document.querySelector('#sub_part_comparator #filterDataMobile');<br>        dataMobileLabel = dataMobileRange.previousElementSibling.querySelector('.max_mob');<br>        dataMobileRange.autoRange = new InputRange(dataMobileRange, dataMobileLabel, true, 'Go', [<br>            {<br>                operator    : 'equal',<br>                opposition  : dataMobileRange.max,<br>                replacement : 'illimité',<br>                addUnit     : false<br>            },<br>            {<br>                operator    : 'equal',<br>                opposition  : dataMobileRange.min,<br>                replacement : 'aucun',<br>                addUnit     : false<br>            },<br>            {<br>                operator    : 'lowerThan',<br>                opposition  : 1,<br>                callback    : function(value){<br>                    return (value * 1000) + ' Mo'<br>                }<br>            }<br>        ]);<br><br>        callMobileRange = document.querySelector('#sub_part_comparator #filterCallMobile');<br>        callMobileLabel = callMobileRange.previousElementSibling.querySelector('.max_mob');<br>        callMobileRange.autoRange = new InputRange(callMobileRange, callMobileLabel, false, 'h', [<br>            {<br>                operator    : 'equal',<br>                opposition  : callMobileRange.max,<br>                replacement : 'illimité',<br>                addUnit     : false<br>            },<br>            {<br>                operator    : 'equal',<br>                opposition  : callMobileRange.min,<br>                replacement : 'aucun',<br>                addUnit     : false<br>            }<br>        ]);<br>    </script></body></html>
