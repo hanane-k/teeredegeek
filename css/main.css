@@ -103,6 +103,10 @@ header, footer  {
     background-color: #e3b5a4;
     color: #773344;
 }
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
  /* ===========================end utility-class====================== */
 
 
@@ -167,12 +171,12 @@ h3> span {
     margin: auto;
     justify-content: space-between;
     margin: 8%, 0%;
-
 }
 
 .video {
     text-align: center;
     width: 100%;
+    margin-top: 3%;
 }
 
 .containerBouton {   
@@ -182,9 +186,8 @@ h3> span {
     border:none;
 	border-radius: 5px;
 	background:#e3b5a4;
-    color: #773344;   
+    color: black;   
     cursor: pointer;
-
 }
 /* ========================end main======================== */
 
