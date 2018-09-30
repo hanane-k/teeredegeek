@@ -103,7 +103,6 @@ header, footer  {
     background-color: #e3b5a4;
     color: #773344;
 }
-
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -155,40 +154,17 @@ h1 {
     flex-direction: column;
 }
 /* ========================end header======================== */
-
-
-
-/* ========================start main======================== */
-h3> span {
-    color: #d44d5c;
-    font-size: 1.5em;
-}
-
-.telAcceil {
-    width: 90%;
-    height: 60vh;
-    display: flex;    
-    margin: auto;
-    justify-content: space-between;
-    margin: 8%, 0%;
-}
-
-.video {
-    text-align: center;
+main {
     width: 100%;
-    margin-top: 3%;
+    /* min-height: 53vh; */
 }
+.message {
+    text-align: center;
+    margin: 12% 5%;
+    }
+/* ========================start main======================== */
 
-.containerBouton {   
-    width: 15%;
-    height: 5vh;
-    margin: 5% 42%;
-    border:none;
-	border-radius: 5px;
-	background:#e3b5a4;
-    color: black;   
-    cursor: pointer;
-}
+
 /* ========================end main======================== */
 
 

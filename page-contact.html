@@ -13,69 +13,66 @@
   lancer son activité dans le e-commerce pour partir à la conquête des autres territoires ruraux de 
   France, son ambition : devenir le leader de la vente de produits électroniques en campagne.">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
-  <style type="text/css"> a { text-decoration: none; } 
-  </style> 
 
+  <style type="text/css"> a { text-decoration: none; } 
+  </style>  
+
+  
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/page-contact.css">
 </head>
 
 <body>
    <!-- ========================start header========================  -->
   <header>
-    <section class="logo">
-      <a href="page-contact.html">
-        <h1>Terre<span>De</span>Geek</h1>
-        <img src="https://png.icons8.com/color/50/000000/mind-map.png" alt="100" height="40">
-        <h6>Cliquez ici pour nou contacter!</h6>
-      </a>
-    </section>
-  </header>
+      <section class="logo">
+          <a href="index.html">
+            <h1>Terre<span>De</span>Geek</h1>
+            <img src="https://png.icons8.com/color/50/000000/mind-map.png" alt="100" height="40">
+            <h6>Revenir à l'Acceuil</h6>
+          </a>
+        </section>
+      </header>
    <!-- ========================end header========================  -->
   
    <!-- ========================start main========================  -->
-  <main>    
-    <div class="video">
-      <iframe width="95%" height="315" src="https://www.youtube.com/embed/z6gedDEBKxU?rel=0&ampshowinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>    
-    <div>
-      <a href="page-produits.html">
-        <input class="containerBouton" type="submit" onclick="window" value="TOUS LES PRODUITS" />
-      </a>
+  <main>
+    <div  class="carte">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41920.07257905243!2d0.8926608066072058!3d48.95339948731226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e16c039d1c8bd3%3A0x5f13ce44f5a3d33a!2s27190+Conches-en-Ouche!5e0!3m2!1sfr!2sfr!4v1538142496303" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
+      </iframe>
     </div>
-    <section class="telAcceil">
-      <div class="produit">
-        <a href= "page-single-samsung-j3.html">
-          <h3>SAMSUNG Galaxy J3 2016 – Or à <span>145€99</span></h3>
-          <img class="img" src="https://i2.cdscdn.com/pdt2/j/3/o/1/400x400/samsunggalaxyj3o/rw/samsung-galaxy-j3-2016-or.jpg" alt="100" height="300">
-        </a>
+    <section>
+      <div class="titre">
+        <h2>Contactez-Nous:</h2>
       </div>
-      <div class="produit">
-        <a href= "page-single-logicom.html">
-          <h3>Logicom M BOT551 4G 8 Go Blanc – Or à <span>84€99</span></h3>
-          <img class="img" src="https://i2.cdscdn.com/pdt2/a/n/c/1/700x700/logimbot551blanc/rw/logicom-m-bot551-4g-8-go-blanc.jpg" alt="100" height="300">
-        </a>
+      <h6>Les champs avec "*" sont obligatoire!</h6>
+      <div class="containerForm">
+        <form class="form" method="POST" action="traitement.php">
+          <input id="nom" type="text" name="name" placeholder="Votre Nom et prénom *" />
+          <input id="date" type="date" name="date" placeholder="jj/mm/aaaa" />
+          <input id="num" type="text" name="number" placeholder="Votre Nuréro de téléphone" />
+          <input id="email" type="email" name="email" placeholder="Votre eMail *"/>
+          <textarea name="Objet" id="objet" cols="50" rows="5" placeholder="Votre Objet *"></textarea>
+          <textarea name="Message" id="message" cols="50" rows="5" placeholder="Votre Message *"></textarea>
+        </form>
       </div>
-      <div class="produit">
-        <a href= "page-single-samsung-j6.html">
-          <h3>Samsung Galaxy J6 Noir à <span>249€00</span></h3>
-          <img class="img" src="https://i2.cdscdn.com/pdt2/6/8/n/1/700x700/samgalaxyj68n/rw/samsung-galaxy-j6-noir.jpg" alt="100" height="300">
-        </a>
-      </div>
+      <aside>
+        <a href="message-contact.html">
+          <input class="valider" type="submit" onclick="window" value="Valider">
+        </a> 
+      </aside>
     </section>
-  
   </main>
    <!-- ========================end main========================  -->
   
    <!-- ========================start footer======================== -->
   <footer>
     <div>
-      <h4>REJOIGNEZ-NOUS SUR:</h4>
+      <h4>REJOIGNEZ NOUS SUR:</h4>
     </div>
     <section class="resSociaux">
       <a href="https://www.facebook.com/terre.degeek">

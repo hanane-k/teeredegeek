@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="ad.size" content="width=728,height=90">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="index_data/styles.css">
+    
+    <script type="text/javascript" src="index_data/ad-scripts.js"></script><style type="text/css" id="t_x_css_sheet">.t_x_noTransition { transition: none !important; -webkit-transition: none !important; }</style>
+    <script type="text/javascript">var clickTag = "http://www.google.fr";</script>
+<script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script></head>
+
+<body>
+    <div id="ad">
+        <div id="F1_bg" class="full F1_bg"></div>
+        <div id="F1_txt_1" class="full txt F1_txt_1 cut in"></div>
+        <div id="F1_txt_2" class="full txt F1_txt_2 cut in"></div>
+        <div id="F1_txt_3_a_1" class="full txt F1_txt_3_a_1 cut"></div>
+        <div id="F1_txt_3_a_2" class="full txt F1_txt_3_a_2 cut"></div>
+        <div id="F1_txt_3_b" class="full txt F1_txt_3_b cut in tween_1 tween_2 tween_3"></div>
+
+        <div id="F2_bg" class="full F2_bg in"></div>
+        <div id="F2_txt" class="full txt F2_txt in"></div>
+        
+        <div id="FF_bg" class="full FF_bg in"></div>
+        <div id="FF_txt" class="full txt FF_txt in"></div>
+
+        <div id="FF_cta" class="full FF_cta in"></div>
+        <div id="COM_logo" class="full COM_logo in"></div>
+        <div id="COM_bloc" class="full COM_bloc"></div>
+        
+        <div id="COM_corner_right" class="full COM_corner COM_corner_right tween"></div>
+        <div id="COM_corner_left" class="full COM_corner COM_corner_left tween"></div>
+
+        <div class="full clickthrough" onclick="window.open(clickTag);"></div>
+    </div>
+
+
+</body></html>
